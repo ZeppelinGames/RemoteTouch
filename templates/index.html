@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" title="Remote Touch">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+<style>
+body, html {
+  height:100%;
+  padding:0;
+  margin:0;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+}
+
+.theader {
+  height:10%;
+}
+
+button {
+  width:100%;
+  height:100%;
+}
+
+.simple-keyboard.hg-layout-default {
+  background-color: black;
+}
+
+.simple-keyboard.hg-layout-default .hg-button {
+  background-color: rgb(220,220,220);
+  color: black;
+  font-size: 75%;
+  font-family: "Lucinda Console", "Courier New", monospace;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.keys-black {
+  background-color: #35464d;
+  color:white;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.keys-highlight {
+  background: red;
+  color: white;
+  outline: 5px;
+  outline-color: white;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "Empty" 
+  "Mouse"
+  "Trackpad"
+  "simple-keyboard";
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 10% 45% 45%;
+  background-color: black;
+}
+.container > div {
+  border: 1px dashed #888;
+}
+
+.mouseButtonContainer {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "lmb"
+  "scroll"
+  "rmb";
+  grid-template-rows: 100%;
+  grid-template-columns: 40% 20% 40%;
+  background-color: black;
+}
+
+.Mouse {
+  grid-area: Mouse;
+}
+.Trackpad {
+  grid-area: Trackpad;
+  border: dotted 10px white;
+}
+.simple-keyboard {
+  position: absolute;
+  bottom: 0px;
+  grid-area: simple-keyboard;
+}
+</style>
+  
+<head>
+<title>Remote Touch</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+</head>
+
+<div class="container">
+  <div class="Mouse">
+    <div class="mouseButtonContainer">
+      <div id="lmb"></div>
+      <div id="scroll"></div>
+      <div id="rmb"></div>
+    </div>
+  </div>
+  <div id="Trackpad" class="Trackpad"></div>
+  <div class="simple-keyboard"> 
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="../static/main.js"></script>
+  </div>
+</div>
+</html>
