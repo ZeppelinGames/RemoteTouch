@@ -7,6 +7,7 @@
 
 ## Description
 Originally built to be a local network remote control software to run on a raspberry pi. I wanted to control the rasp pi using my phone with PC-like controls. Running Flask for webserver side + pyautogui for emulated keypresses and mouse movement.
+JS onscreen keyboard built off https://github.com/hodgef/simple-keyboard
 
 ## Check out my other shit
 <a href="http://www.twitter.com/Zeppelin_Games"><img src="https://image.flaticon.com/icons/png/512/124/124021.png" width="48"></a>
